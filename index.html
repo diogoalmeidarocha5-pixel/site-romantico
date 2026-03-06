@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Diogo ❤️ Emily</title>
+
+<style>
+
+body{
+margin:0;
+background:black;
+font-family:Arial;
+text-align:center;
+color:white;
+overflow-x:hidden;
+}
+
+/* título */
+
+h1{
+margin-top:30px;
+font-size:30px;
+}
+
+/* slideshow */
+
+.slideshow{
+width:90%;
+max-width:420px;
+margin:auto;
+position:relative;
+}
+
+.slide{
+display:none;
+width:100%;
+border-radius:15px;
+}
+
+.slide img{
+width:100%;
+border-radius:15px;
+}
+
+/* contador */
+
+#contador{
+font-size:20px;
+margin:20px;
+}
+
+/* texto */
+
+.mensagem{
+font-size:18px;
+margin:20px;
+padding:15px;
+color:white;
+-webkit-text-stroke:1px red;
+line-height:1.6;
+}
+
+/* blocos */
+
+.bloco{
+margin-top:40px;
+}
+
+/* corações nas bordas */
+
+.heart{
+position:fixed;
+color:red;
+opacity:0.5;
+font-size:22px;
+pointer-events:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🌙 Eu te amo daqui até a lua ❤️</h1>
+
+<div id="contador"></div>
+
+<div class="slideshow">
+
+<div class="slide">
+<img src="foto1.jpeg">
+</div>
+
+<div class="slide">
+<img src="foto2.jpeg">
+</div>
+
+<div class="slide">
+<img src="foto3.jpeg">
+</div>
+
+<div class="slide">
+<img src="foto4.jpeg">
+</div>
+
+</div>
+
+<div class="bloco mensagem">
+
+Meu amor desde o dia em que eu te conheci minha vida mudou, mudou pra melhor, foram poucos meses mas eu percebo a cada dia que passa o quão incrível você é, o quão dedicada, esforçada e apaixonada vc é, n tenho palavras pra descrever tudo oq sinto quando te vejo, quando te cheiro, quando te abraço e te beijo, você chegou com tudo e dominou meu coração, e a cada dia que passa eu te amo mais, é incrivel a forma com que voce me faz ter a certeza q é do seu lado que eu quero ficar o resto da minha vida, sei que são só palavras, sei que isso é pouco e um pouco bobo, mas eu preciso dizer isso.
+
+<br><br>
+
+Sei que vai ser uma esposa maravilhosa e uma mãe sensacional, você é tudo e eu quero compartilhar toda a minha vida com você!!!
+
+<br><br>
+
+<b>EU TE AMO, eu te amo minha abelinha ❤️❤️❤️❤️</b>
+
+</div>
+
+<div class="bloco">
+
+<iframe width="300" height="170"
+src="https://www.youtube.com/watch?v=7DH468OKfQA?autoplay=1&loop=1&playlist=7DH468OKfQA"
+allow="autoplay">
+</iframe>
+
+</div>
+<script>
+
+/* contador */
+
+const inicio = new Date("Jan 21, 2026 00:00:00").getTime()
+
+setInterval(()=>{
+
+let agora = new Date().getTime()
+
+let tempo = agora - inicio
+
+let dias = Math.floor(tempo/(1000*60*60*24))
+let horas = Math.floor((tempo%(1000*60*60*24))/(1000*60*60))
+let minutos = Math.floor((tempo%(1000*60*60))/(1000*60))
+let segundos = Math.floor((tempo%(1000*60))/1000)
+
+document.getElementById("contador").innerHTML =
+"❤️ Estamos juntos há ❤️<br>"+dias+" dias "+horas+" horas "+minutos+" minutos "+segundos+" segundos"
+
+},1000)
+
+
+/* slideshow */
+
+let slideIndex=0
+
+function showSlides(){
+
+let slides=document.getElementsByClassName("slide")
+
+for(let i=0;i<slides.length;i++){
+slides[i].style.display="none"
+}
+
+slideIndex++
+
+if(slideIndex>slides.length){
+slideIndex=1
+}
+
+slides[slideIndex-1].style.display="block"
+
+setTimeout(showSlides,6000)
+
+}
+
+showSlides()
+
+
+/* corações */
+
+function criarCoracao(){
+
+const heart=document.createElement("div")
+
+heart.classList.add("heart")
+
+heart.innerHTML="❤️"
+
+heart.style.left=Math.random()*100+"vw"
+
+heart.style.top=Math.random()*100+"vh"
+
+document.body.appendChild(heart)
+
+}
+
+for(let i=0;i<25;i++){
+criarCoracao()
+}
+
+</script>
+
+</body>
+
+</html>
+```
